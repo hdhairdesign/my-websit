@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HD Hair Design</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4;
+  direction: ltr;
+}
+
+/* Navbar */
+nav {
+  background: rgba(0,0,0,0.9);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #000000, #434343);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  width: 130px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery img {
+  width: 250px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+}
+
+/* Contact */
+.contact a {
+  display: block;
+  margin: 10px;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Google Map & Reviews */
+.map-container {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Review Cards */
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.review-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.review-card strong {
+  font-size: 16px;
+}
+
+.review-card .rating {
+  color: #f4b400;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="#">Startseite</a>
+  <a href="#about">Über mich</a>
+  <a href="#work">Meine Arbeiten</a>
+  <a href="#contact">Kontakt</a>
+</nav>
+
+<!-- Header -->
+<header>
+  <img src="logo.png" alt="HD Hair Design Logo" class="logo">
+  <h1>HD Hair Design</h1>
+  <p>Professionelle Haarstylings und kreative Akzente</p>
+  <button onclick="document.getElementById('contact').scrollIntoView()">Jetzt buchen</button>
+</header>
+
+<!-- About -->
+<section id="about">
+  <h2>Über mich</h2>
+  <p>Ich bin ein professioneller Hairstylist und biete die neuesten Schnitte und trendige Färbetechniken in höchster Qualität an.</p>
+</section>
+
+<!-- Work -->
+<section id="work">
+  <h2>Meine Arbeiten</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/250">
+    <img src="https://via.placeholder.com/250">
+    <img src="https://via.placeholder.com/250">
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <h2>Kontaktieren Sie mich</h2>
+
+  📧
+  <a href="mailto:dilo.123456@icloud.com">dilo.123456@icloud.com</a>
+
+  📷
+  <a href="https://instagram.com/hd_hair.design1" target="_blank">instagram.com/hd_hair.design1</a>
+
+  📍 Adresse:
+  <p>Stadskanaal 1, 28865 Lilienthal</p>
+
+  📞 Telefon:
+  <a href="tel:+4942989312367">04298 9312367</a>
+
+  <!-- Google Map -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps?q=Stadskanaal+1,+28865+Lilienthal&output=embed" 
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <!-- Google Reviews -->
+  <h3>Bewertungen auf Google</h3>
+  <div class="reviews-container" id="reviews-container">
+    <!-- سيتم ملء البطاقات بواسطة JavaScript -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>©️ 2026 HD Hair Design - Alle Rechte vorbehalten</p>
+</footer>
+
+<script>
+// مثال تعليقات جاهزة (يمكنك استبدالها بتعليقات حقيقية من Google API لاحقًا)
+const reviews = [
+  {name:"Anna Müller", rating:5, text:"Sehr professionell! Ich liebe meinen neuen Haarschnitt."},
+  {name:"Jonas Schmidt", rating:4, text:"Tolle Atmosphäre und freundliches Personal."},
+  {name:"Lea Becker", rating:5, text:"Absolute Empfehlung für kreative Stylings."}
+];
+
+const container = document.getElementById('reviews-container');
+
+reviews.forEach(r => {
+  const div = document.createElement('div');
+  div.classList.add('review-card');
+  div.innerHTML = `
+    <strong>${r.name}</strong>
+    <div class="rating">${'★'.repeat(r.rating)}</div>
+    <p>${r.text}</p>
+  `;
+  container.appendChild(div);
+});
+</script>
+
+</body>
+</html>
